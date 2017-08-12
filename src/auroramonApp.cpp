@@ -146,7 +146,7 @@ void ConfigSave(int control)
             if(extra_readings[ix].status_slot > 0)
                 value += 2000;
         }
-        string += wxString::Format(_T("%d "), value);
+        string += wxString::Format(_T("%ld "), value);
     }
     pConfig->Write(_T("/extra_readings"), string);
     pConfig->SetPath(_T("/pvoutput"));

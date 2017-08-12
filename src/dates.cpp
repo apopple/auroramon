@@ -38,10 +38,6 @@ unsigned short *yeartab_energy[N_INV][N_YEARS];
 static short monthstart1[14] = {0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334, 365, 396};  // non-leap years
 static short monthstart2[14] = {0, 31, 60, 91, 121, 152, 182, 213, 244, 274, 305, 335, 366, 397};  // leap years
 
-wxFont Font_Year(13, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
-wxFont Font_Default(10, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
-
-
 void InitDates()
 {//=============
     struct tm *btime;
@@ -792,6 +788,8 @@ void GraphPanel::DrawEnergyHistogram(wxDC &dc)
     int today_yearix;
     int latest_doy;
     int latest_yearix;
+    wxFont Font_Year(13, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
+    wxFont Font_Default(10, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
 
     histogram_mode = histogram_page;
 

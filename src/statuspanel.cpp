@@ -24,10 +24,6 @@
 #include <wx/sizer.h>
 #include "auroramon.h"
 
-
-wxFont font_big(24, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
-wxFont font_medium(19, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
-
 #ifdef __WXMSW__
 #define TE_BIG   wxTE_RICH | wxTE_DONTWRAP
 #define HT_PW0  33
@@ -357,6 +353,8 @@ void Mainframe::MakeStatusPanel(void)
     int ix;
     int inv;
     int y;
+    wxFont font_big(24, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
+    wxFont font_medium(19, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
 
     txt_powertot = new wxTextCtrl(status_panel, -1, _T(""), wxPoint(0,2), wxSize(116,42), TE_BIG | wxTE_READONLY | wxTE_CENTRE);
     txt_powertot->SetDefaultStyle(wxTextAttr(wxNullColour, wxNullColour, font_big));

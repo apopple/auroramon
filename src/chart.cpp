@@ -24,11 +24,6 @@
 
 #define N_SCROLL    8   //scroll by 8 pixels
 
-wxFont Font_GraphDate(24, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
-wxFont Font_ChartName(16, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
-wxFont Font_SunElevation(10, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
-
-
 CHART_PAGE chart_pages[N_PAGES];
 
 DATAREC *graph_data[N_INV];
@@ -737,6 +732,7 @@ void GraphPanel::PlotGraphs(wxDC &dc, int height, int pass)
     wxColour colour;
     double scale;
     int graph_type;
+    wxFont Font_SunElevation(10, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
 
     scale = x_scale;
 
@@ -1105,6 +1101,8 @@ void GraphPanel::OnDraw(wxDC &dc)
     wxColour colour;
     int x_grads;
     int margin = 20;
+    wxFont Font_GraphDate(24, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_BOLD);
+    wxFont Font_ChartName(16, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
 
     if(enable_draw == 0)
         return;  // don't draw until startup is complete
